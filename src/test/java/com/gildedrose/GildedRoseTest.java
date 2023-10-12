@@ -128,5 +128,14 @@ class GildedRoseTest {
     assertEquals(1, app.items[2].quality);
   }
 
+  @Test
+  public void testToString() {
+    Item item = new Item("foo", 0, 0);
+  
+    //test pour toString item
+    assertEquals("foo, 0, 0", item.toString());
+  
+  }
+  
 }
 
