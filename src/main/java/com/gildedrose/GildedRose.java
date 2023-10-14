@@ -30,6 +30,13 @@ private void decreaseQuality(Item item) {
     }
 }
 
+private void updateSellIn(Item item) {
+    if (!isSulfuras(item)) {
+        item.sellIn--;
+    }
+}
+
+
 
   public void updateQuality() {
     for (int i = 0; i < items.length; i++) {
@@ -42,21 +49,16 @@ private void decreaseQuality(Item item) {
 
           if (isBackstagePass(items[i])) {
             if (items[i].sellIn < 11) {
-              if (items[i].quality < 50) {
-                items[i].quality = items[i].quality + 1;
-              }
+              increaseQuality(items[i]);
             }
 
             if (items[i].sellIn < 6) {
-              increaseQuality(items[i]);
-            }
+              increaseQuality(items[i]);}
           }
         }
       }
 
-      if (!isSulfuras(items[i])) {
-        items[i].sellIn = items[i].sellIn - 1;
-      }
+      updateSellIn(items[i]);
 
       if (items[i].sellIn < 0) {
         if (!isAgedBrie(items[i])) {
