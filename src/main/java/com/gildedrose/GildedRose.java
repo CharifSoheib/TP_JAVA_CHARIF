@@ -18,19 +18,27 @@ private boolean isBackstagePass(Item item) {
 private boolean isSulfuras(Item item) {
     return item.name.equals("Sulfuras, Hand of Ragnaros");
 }
+private void increaseQuality(Item item) {
+        if (item.quality < 50) {
+            item.quality++;
+        }
+}
+
+private void decreaseQuality(Item item) {
+    if (item.quality > 0 && !isSulfuras(item)) {
+        item.quality--;
+    }
+}
 
 
   public void updateQuality() {
     for (int i = 0; i < items.length; i++) {
+
       if (!isAgedBrie(items[i]) && !isBackstagePass(items[i])) {
-        if (items[i].quality > 0) {
-          if (!isSulfuras(items[i])) {
-            items[i].quality = items[i].quality - 1;
-          }
-        }
+        decreaseQuality(items[i]);
+        
       } else {
-        if (items[i].quality < 50) {
-          items[i].quality = items[i].quality + 1;
+         increaseQuality(items[i]); {
 
           if (isBackstagePass(items[i])) {
             if (items[i].sellIn < 11) {
@@ -40,9 +48,7 @@ private boolean isSulfuras(Item item) {
             }
 
             if (items[i].sellIn < 6) {
-              if (items[i].quality < 50) {
-                items[i].quality = items[i].quality + 1;
-              }
+              increaseQuality(items[i]);
             }
           }
         }
@@ -55,20 +61,14 @@ private boolean isSulfuras(Item item) {
       if (items[i].sellIn < 0) {
         if (!isAgedBrie(items[i])) {
           if (!isBackstagePass(items[i])) {
-            if (items[i].quality > 0) {
-              if (!isSulfuras(items[i])) {
-                items[i].quality = items[i].quality - 1;
-              }
-            }
+            decreaseQuality(items[i]);
           } else {
             items[i].quality = items[i].quality - items[i].quality;
           }
         } else {
-          if (items[i].quality < 50) {
-            items[i].quality = items[i].quality + 1;
-          }
-        }
+         increaseQuality(items[i]);
       }
     }
   }
+}
 }
