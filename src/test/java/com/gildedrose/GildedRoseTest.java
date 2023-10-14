@@ -128,12 +128,13 @@ class GildedRoseTest {
     assertEquals(1, app.items[2].quality);
   }
 
-  @Test
+   @Test
   public void testToString() {
     Item item = new Item("foo", 0, 0);
   
     //test pour toString item
-    assertEquals("foo, 0, 0", item.toString());
+    assertEquals("foo, 0, 0", item.toString() );
+
   
   }
 
@@ -181,8 +182,8 @@ public void testBackstageQualityIncreaseSellInMoreThanSix() {
   assertEquals("Backstage passes to a TAFKAL80ETC concert", app.items[1].name);
   assertEquals(5, app.items[1].sellIn);
   assertEquals(32, app.items[1].quality);} 
-}
 
-  
+
+}
 
 

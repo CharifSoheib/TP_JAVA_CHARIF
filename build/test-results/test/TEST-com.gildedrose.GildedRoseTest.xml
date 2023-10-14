@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.gildedrose.GildedRoseTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2023-10-12T19:57:24" hostname="DESKTOP-QACEL36" time="0.115">
+<testsuite name="com.gildedrose.GildedRoseTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2023-10-14T22:44:58" hostname="DESKTOP-QACEL36" time="0.085">
   <properties/>
-  <testcase name="testNormalItemQualityDecreaseAfterSellIn()" classname="com.gildedrose.GildedRoseTest" time="0.048"/>
+  <testcase name="testNormalItemQualityDecreaseAfterSellIn()" classname="com.gildedrose.GildedRoseTest" time="0.041"/>
   <testcase name="Test that the name is unchanged" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
   <testcase name="testToString()" classname="com.gildedrose.GildedRoseTest" time="0.016"/>
   <testcase name="testNotSulfurasHandOfRagnarosAfterSellInLessThanZeroAndQualityMoreThanZero()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="testBackstageQualityIncreaseSellInLessThanSixAndQualityFifty()" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
-  <testcase name="testBackstagePassQualityAfterSellIn()" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
-  <testcase name="testAgedBrieQualityIncreaseAfterSellInAndQualityFifty()" classname="com.gildedrose.GildedRoseTest" time="0.005"/>
-  <testcase name="testAgedBrieQualityIncreaseAfterSellIn()" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
-  <testcase name="testUpdateQuality()" classname="com.gildedrose.GildedRoseTest" time="0.011"/>
+  <testcase name="testBackstageQualityIncreaseSellInLessThanSixAndQualityFifty()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="testBackstageQualityIncreaseSellInMoreThanEleven()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="testBackstagePassQualityAfterSellIn()" classname="com.gildedrose.GildedRoseTest" time="0.003"/>
+  <testcase name="testAgedBrieQualityIncreaseAfterSellInAndQualityFifty()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="testAgedBrieQualityIncreaseAfterSellIn()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="testUpdateQuality()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="testBackstageQualityIncreaseSellInMoreThanOne()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="testBackstageQualityIncreaseSellInMoreThanSix()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="testQualityNeverNegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
