@@ -30,48 +30,56 @@ class GildedRose {
 
 public void updateQuality() {
 <span class="fc bfc" id="L32" title="All 2 branches covered.">    for (Item item : items) {</span>
-<span class="fc bfc" id="L33" title="All 4 branches covered.">        switch (item.name) {</span>
+<span class="fc bfc" id="L33" title="All 5 branches covered.">        switch (item.name) {</span>
+            case &quot;Conjured&quot;:
+<span class="fc bfc" id="L35" title="All 2 branches covered.">            if (item.sellIn &gt;= 0) {</span>
+<span class="fc" id="L36">                item.quality -= 2;</span>
+            } else {
+<span class="fc" id="L38">                item.quality -= 4;</span>
+            }
+<span class="fc" id="L40">            break;</span>
             case &quot;Aged Brie&quot;:
-<span class="fc" id="L35">                increaseQuality(item);</span>
-<span class="fc" id="L36">                break;</span>
+<span class="fc" id="L42">                increaseQuality(item);</span>
+<span class="fc" id="L43">                break;</span>
             case &quot;Backstage passes to a TAFKAL80ETC concert&quot;:
-<span class="fc" id="L38">                increaseQuality(item);</span>
-<span class="fc bfc" id="L39" title="All 2 branches covered.">                if (item.sellIn &lt; 11) {</span>
-<span class="fc" id="L40">                    increaseQuality(item);</span>
+<span class="fc" id="L45">                increaseQuality(item);</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">                if (item.sellIn &lt; 11) {</span>
+<span class="fc" id="L47">                    increaseQuality(item);</span>
                 }
-<span class="fc bfc" id="L42" title="All 2 branches covered.">                if (item.sellIn &lt; 6) {</span>
-<span class="fc" id="L43">                    increaseQuality(item);</span>
+<span class="fc bfc" id="L49" title="All 2 branches covered.">                if (item.sellIn &lt; 6) {</span>
+<span class="fc" id="L50">                    increaseQuality(item);</span>
                 }
                 break;
             case &quot;Sulfuras, Hand of Ragnaros&quot;:
-            
-<span class="fc" id="L48">                break;</span>
+
+<span class="fc" id="L55">                break;</span>
             default:
-<span class="fc" id="L50">                decreaseQuality(item);</span>
+<span class="fc" id="L57">                decreaseQuality(item);</span>
                 break;
         }
-<span class="fc" id="L53">        updateSellIn(item);</span>
 
-<span class="fc bfc" id="L55" title="All 2 branches covered.">        if (item.sellIn &lt;0)</span>
+<span class="fc" id="L61">        updateSellIn(item);</span>
+
+<span class="fc bfc" id="L63" title="All 2 branches covered.">        if (item.sellIn &lt;0)</span>
         {
-<span class="fc bfc" id="L57" title="All 4 branches covered.">            switch (item.name) {</span>
+<span class="fc bfc" id="L65" title="All 4 branches covered.">            switch (item.name) {</span>
                 case &quot;Aged Brie&quot;:
-<span class="fc" id="L59">                    increaseQuality(item);</span>
-<span class="fc" id="L60">                    break;</span>
+<span class="fc" id="L67">                    increaseQuality(item);</span>
+<span class="fc" id="L68">                    break;</span>
                 case &quot;Backstage passes to a TAFKAL80ETC concert&quot;:
-<span class="fc" id="L62">                    item.quality = 0;</span>
-<span class="fc" id="L63">                    break;</span>
+<span class="fc" id="L70">                    item.quality = 0;</span>
+<span class="fc" id="L71">                    break;</span>
                 case &quot;Sulfuras, Hand of Ragnaros&quot;:
                 
-<span class="fc" id="L66">                    break;</span>
+<span class="fc" id="L74">                    break;</span>
                 default:
-<span class="fc" id="L68">                    decreaseQuality(item);</span>
+<span class="fc" id="L76">                    decreaseQuality(item);</span>
                     break;
             }
-        }
-
-        
+        }  
     }
-<span class="fc" id="L75">}</span>
+<span class="fc" id="L81">}</span>
 }
+
+
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>

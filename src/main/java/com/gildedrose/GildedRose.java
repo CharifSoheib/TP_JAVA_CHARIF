@@ -31,6 +31,13 @@ class GildedRose {
 public void updateQuality() {
     for (Item item : items) {
         switch (item.name) {
+            case "Conjured":
+            if (item.sellIn >= 0) {
+                item.quality -= 2;
+            } else {
+                item.quality -= 4;
+            }
+            break;
             case "Aged Brie":
                 increaseQuality(item);
                 break;
@@ -44,12 +51,13 @@ public void updateQuality() {
                 }
                 break;
             case "Sulfuras, Hand of Ragnaros":
-            
+
                 break;
             default:
                 decreaseQuality(item);
                 break;
         }
+
         updateSellIn(item);
 
         if (item.sellIn <0)
@@ -68,9 +76,9 @@ public void updateQuality() {
                     decreaseQuality(item);
                     break;
             }
-        }
-
-        
+        }  
     }
 }
 }
+
+

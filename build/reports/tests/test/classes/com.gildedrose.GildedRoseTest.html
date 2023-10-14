@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">2</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.096s</div>
+<div class="counter">0.081s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">86%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,52 +61,10 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
-</li>
-<li>
-<a href="#tab1">Tests</a>
+<a href="#tab0">Tests</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="testConjuredItemQualityDecreaseSellInMoreThanZero()"></a>
-<h3 class="failures">testConjuredItemQualityDecreaseSellInMoreThanZero()</h3>
-<span class="code">
-<pre>org.opentest4j.AssertionFailedError: expected: &lt;8&gt; but was: &lt;9&gt;
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:527)
-	at app//com.gildedrose.GildedRoseTest.testConjuredItemQualityDecreaseSellInMoreThanZero(GildedRoseTest.java:199)
-	at java.base@17.0.8.1/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base@17.0.8.1/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base@17.0.8.1/java.util.ArrayList.forEach(ArrayList.java:1511)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="ttestConjuredItemQualityDecreaseInLessThanZero()"></a>
-<h3 class="failures">ttestConjuredItemQualityDecreaseInLessThanZero()</h3>
-<span class="code">
-<pre>org.opentest4j.AssertionFailedError: expected: &lt;5&gt; but was: &lt;8&gt;
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:527)
-	at app//com.gildedrose.GildedRoseTest.ttestConjuredItemQualityDecreaseInLessThanZero(GildedRoseTest.java:212)
-	at java.base@17.0.8.1/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base@17.0.8.1/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base@17.0.8.1/java.util.ArrayList.forEach(ArrayList.java:1511)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -138,13 +96,13 @@
 <tr>
 <td class="success">testBackstageQualityIncreaseSellInLessThanSixAndQualityFifty()</td>
 <td class="success">testBackstageQualityIncreaseSellInLessThanSixAndQualityFifty()</td>
-<td class="success">0.001s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testBackstageQualityIncreaseSellInMoreThanEleven()</td>
 <td class="success">testBackstageQualityIncreaseSellInMoreThanEleven()</td>
-<td class="success">0.001s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -160,27 +118,27 @@
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">testConjuredItemQualityDecreaseSellInMoreThanZero()</td>
-<td class="failures">testConjuredItemQualityDecreaseSellInMoreThanZero()</td>
-<td class="failures">0.022s</td>
-<td class="failures">failed</td>
+<td class="success">testConjuredItemQualityDecreaseSellInMoreThanZero()</td>
+<td class="success">testConjuredItemQualityDecreaseSellInMoreThanZero()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Test that the name is unchanged</td>
 <td class="success">testName()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testNormalItemQualityDecreaseAfterSellIn()</td>
-<td class="success">testNormalItemQualityDecreaseAfterSellIn()</td>
-<td class="success">0.045s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testNotSulfurasHandOfRagnarosAfterSellInLessThanZeroAndQualityMoreThanZero()</td>
-<td class="success">testNotSulfurasHandOfRagnarosAfterSellInLessThanZeroAndQualityMoreThanZero()</td>
 <td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testNormalItemQualityDecreaseAfterSellIn()</td>
+<td class="success">testNormalItemQualityDecreaseAfterSellIn()</td>
+<td class="success">0.051s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testNotSulfurasHandOfRagnarosAfterSellInLessThanZeroAndQualityMoreThanZero()</td>
+<td class="success">testNotSulfurasHandOfRagnarosAfterSellInLessThanZeroAndQualityMoreThanZero()</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -192,7 +150,7 @@
 <tr>
 <td class="success">testToString()</td>
 <td class="success">testToString()</td>
-<td class="success">0.014s</td>
+<td class="success">0.015s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -202,10 +160,10 @@
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">ttestConjuredItemQualityDecreaseInLessThanZero()</td>
-<td class="failures">ttestConjuredItemQualityDecreaseInLessThanZero()</td>
-<td class="failures">0.002s</td>
-<td class="failures">failed</td>
+<td class="success">ttestConjuredItemQualityDecreaseInLessThanZero()</td>
+<td class="success">ttestConjuredItemQualityDecreaseInLessThanZero()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
@@ -217,7 +175,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.3</a> at 15 oct. 2023, 00:29:04</p>
+<a href="http://www.gradle.org">Gradle 8.3</a> at 15 oct. 2023, 00:32:04</p>
 </div>
 </div>
 </body>
