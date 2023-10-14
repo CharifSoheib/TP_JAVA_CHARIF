@@ -184,6 +184,35 @@ public void testBackstageQualityIncreaseSellInMoreThanSix() {
   assertEquals(32, app.items[1].quality);} 
 
 
+
+
+@Test
+public void testConjuredItemQualityDecreaseSellInMoreThanZero() {
+  app.items[3].sellIn = 1;
+  app.items[3].quality = 10;
+  app.items[3].name = "Conjured";
+  app.updateQuality();
+
+  // Test pour conjured item qualité decremente par 2 sellIn => 0
+  assertEquals("Conjured", app.items[3].name);
+  assertEquals(0, app.items[3].sellIn);
+  assertEquals(8, app.items[3].quality);
+}
+
+  @Test
+public void ttestConjuredItemQualityDecreaseInLessThanZero() {
+  app.items[3].sellIn = -1;
+  app.items[3].quality = 10;
+  app.items[3].name = "Conjured";
+  app.updateQuality();
+
+  // Test pour conjured item qualité decremente par 4 quand sellIn < 0
+  assertEquals("Conjured", app.items[3].name);
+  assertEquals(-2, app.items[3].sellIn);
+  assertEquals(5, app.items[3].quality);
+
+}
+
 }
 
 
